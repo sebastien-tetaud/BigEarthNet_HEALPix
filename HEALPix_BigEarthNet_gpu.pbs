@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#PBS -N HEALPix_BigEarthNet
+#PBS -l walltime=01:30:00
+#PBS -l select=1:ncpus=96:mem=700g:ngpus=4
+#PBS -q gpu4_std
+#PBS -l place=scatter:excl
+
+
+cd $PBS_O_WORKDIR
+.venv/bin/python /lustre/home/u10160001/HEALPix_BigEarthNet/main.py
